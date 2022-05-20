@@ -135,6 +135,8 @@ def register_transform(name: str, bypass_checks=False):
 import_all_modules(FILE_ROOT, "classy_vision.dataset.transforms")
 
 from .lighting_transform import LightingTransform  # isort:skip
+from .rotation_transform import RotationTransform  # isort:skip
+from .corner_mask_transform import CornerMask  # isort:skip
 from .util import ApplyTransformToKey  # isort:skip
 from .util import ImagenetAugmentTransform  # isort:skip
 from .util import ImagenetNoAugmentTransform  # isort:skip
@@ -150,6 +152,8 @@ __all__ = [
     "ApplyTransformToKey",
     "TupleToMapTransform",
     "LightingTransform",
+    "RotationTransform",
+    "CornerMask",
     "register_transform",
     "build_transform",
     "build_transforms",

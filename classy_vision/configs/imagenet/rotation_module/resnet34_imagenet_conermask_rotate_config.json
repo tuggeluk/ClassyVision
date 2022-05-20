@@ -14,7 +14,8 @@
                 "name": "apply_transform_to_key",
                 "transforms": [
                     {"name": "RandomResizedCrop", "size": 224},
-                    {"name": "RandomHorizontalFlip"},
+                    {"name": "CornerMask"},
+                    {"name": "RotationTransform"},
                     {"name": "ToTensor"},
                     {
                         "name": "Normalize",
