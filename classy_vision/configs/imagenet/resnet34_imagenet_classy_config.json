@@ -7,7 +7,7 @@
     "dataset": {
         "train": {
             "name": "image_path",
-            "batchsize_per_replica": 128,
+            "batchsize_per_replica": 256,
             "num_samples": null,
             "use_shuffle": true,
             "transforms": [{
@@ -28,7 +28,7 @@
         },
         "test": {
             "name": "image_path",
-            "batchsize_per_replica": 100,
+            "batchsize_per_replica": 200,
             "num_samples": null,
             "use_shuffle": false,
             "transforms": [{
@@ -54,17 +54,15 @@
         }
     },
     "model": {
-        "name": "resnet",
-        "num_blocks": [3, 4, 6, 3],
+        "name": "resnet34",
         "small_input": false,
-        "zero_init_bn_residuals": true,
         "heads": [
           {
             "name": "fully_connected",
             "unique_id": "default_head",
             "num_classes": 1000,
             "fork_block": "block3-2",
-            "in_plane": 2048
+            "in_plane": 512
           }
         ]
     },
